@@ -1,7 +1,8 @@
-package com.example.samolethackaton
+package com.example.samolethackaton.screens
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.samolethackaton.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
