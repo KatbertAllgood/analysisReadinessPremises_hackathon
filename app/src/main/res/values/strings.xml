@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">samoletHackaton</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- Profile Fragment -->
+    <string name="my_objects">Мои объекты</string>
+    <string name="my_statistic">Моя статистика</string>
+    <string name="counting_objects_date">Количество объектов за %s.%s.%s</string>
+    <string name="amount">%s шт.</string>
+    <string name="bypass_plan">%s\nПлан\nобхода</string>
+    <string name="my_income">%s₽\nМой доход</string>
+
+    <!-- Item my object -->
+    <string name="amount_of_objects">Количество объектов:</string>
+    <string name="number_of_flats">%s квартир</string>
+    <string name="address_of_object">Адрес объекта:</string>
+    <string name="passed_objects">Пройдено объектов: %s из %s</string>
+
 </resources>

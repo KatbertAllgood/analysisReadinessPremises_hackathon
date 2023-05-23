@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background">
+
+        <shape android:shape="rectangle">
+
+            <solid android:color="@color/profile_progress_bar_background" />
+
+            <corners
+                android:radius="0dp"/>
+
+        </shape>
+
+    </item>
+
+    <item android:id="@android:id/progress">
+
+        <scale android:scaleWidth="100%">
+
+            <shape android:shape="rectangle">
+
+                <corners
+                    android:radius="0dp"/>
+
+                <solid android:color="@color/samolet_blue" />
+
+            </shape>
+
+        </scale>
+
+    </item>
+
+</layer-list>
