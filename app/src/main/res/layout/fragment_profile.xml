@@ -47,7 +47,7 @@
                 android:layout_marginHorizontal="50dp"
                 android:gravity="center"
 
-                tools:text="Петров Николай Иванович"
+                tools:text="Липухин Игорь Николаевич"
                 android:fontFamily="@font/roboto_regular"
                 android:textColor="@color/black"
                 android:textSize="18sp"/>
@@ -177,7 +177,7 @@
                 android:layout_marginTop="12dp">
 
                 <com.google.android.material.progressindicator.CircularProgressIndicator
-                    android:id="@+id/fragment_profile_rv_bypass_plan"
+                    android:id="@+id/fragment_profile_pb_bypass_plan"
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -190,7 +190,7 @@
                     app:trackCornerRadius="5dp"
                     app:trackThickness="10dp"
 
-                    app:layout_constraintEnd_toStartOf="@id/fragment_profile_rv_my_income"
+                    app:layout_constraintEnd_toStartOf="@id/fragment_profile_pb_my_income"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent"/>
 
@@ -206,13 +206,13 @@
                     android:textColor="@color/samolet_blue"
                     android:textSize="14sp"
 
-                    app:layout_constraintStart_toStartOf="@id/fragment_profile_rv_bypass_plan"
-                    app:layout_constraintTop_toTopOf="@id/fragment_profile_rv_bypass_plan"
-                    app:layout_constraintBottom_toBottomOf="@id/fragment_profile_rv_bypass_plan"
-                    app:layout_constraintEnd_toEndOf="@id/fragment_profile_rv_bypass_plan" />
+                    app:layout_constraintStart_toStartOf="@id/fragment_profile_pb_bypass_plan"
+                    app:layout_constraintTop_toTopOf="@id/fragment_profile_pb_bypass_plan"
+                    app:layout_constraintBottom_toBottomOf="@id/fragment_profile_pb_bypass_plan"
+                    app:layout_constraintEnd_toEndOf="@id/fragment_profile_pb_bypass_plan" />
 
                 <com.google.android.material.progressindicator.CircularProgressIndicator
-                    android:id="@+id/fragment_profile_rv_my_income"
+                    android:id="@+id/fragment_profile_pb_my_income"
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -225,7 +225,7 @@
                     app:trackCornerRadius="5dp"
                     app:trackThickness="10dp"
 
-                    app:layout_constraintStart_toEndOf="@id/fragment_profile_rv_bypass_plan"
+                    app:layout_constraintStart_toEndOf="@id/fragment_profile_pb_bypass_plan"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
 
@@ -241,10 +241,47 @@
                     android:textColor="@color/samolet_blue"
                     android:textSize="14sp"
 
-                    app:layout_constraintStart_toStartOf="@id/fragment_profile_rv_my_income"
-                    app:layout_constraintTop_toTopOf="@id/fragment_profile_rv_my_income"
-                    app:layout_constraintBottom_toBottomOf="@id/fragment_profile_rv_my_income"
-                    app:layout_constraintEnd_toEndOf="@id/fragment_profile_rv_my_income" />
+                    app:layout_constraintStart_toStartOf="@id/fragment_profile_pb_my_income"
+                    app:layout_constraintTop_toTopOf="@id/fragment_profile_pb_my_income"
+                    app:layout_constraintBottom_toBottomOf="@id/fragment_profile_pb_my_income"
+                    app:layout_constraintEnd_toEndOf="@id/fragment_profile_pb_my_income" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/fragment_profile_pb_objects_passed"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="12dp"
+
+                    android:progress="50"
+                    app:indicatorColor="@color/samolet_blue"
+                    app:indicatorSize="120dp"
+
+                    app:trackColor="@color/profile_progress_bar_background"
+                    app:trackCornerRadius="5dp"
+                    app:trackThickness="10dp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fragment_profile_pb_my_income"/>
+
+                <TextView
+                    android:id="@+id/fragment_profile_tv_objects_passed"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/my_income"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@color/samolet_blue"
+                    android:textSize="14sp"
+
+                    app:layout_constraintStart_toStartOf="@id/fragment_profile_pb_objects_passed"
+                    app:layout_constraintTop_toTopOf="@id/fragment_profile_pb_objects_passed"
+                    app:layout_constraintBottom_toBottomOf="@id/fragment_profile_pb_objects_passed"
+                    app:layout_constraintEnd_toEndOf="@id/fragment_profile_pb_objects_passed" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -16,4 +16,40 @@
     <string name="address_of_object">Адрес объекта:</string>
     <string name="passed_objects">Пройдено объектов: %s из %s</string>
 
+    <!-- District Fragment -->
+    <string name="flats_dist">квартир</string>
+    <string name="sections">секций</string>
+    <string name="sections_alt">Секции</string>
+    <string name="sections_readiness">Готовность секций по этажам</string>
+
+    <!-- Item section -->
+    <string name="section_for_item">с\nе\nк\nц\nи\nя</string>
+
+    <!-- Section Fragment -->
+    <string name="info_about_bypasses">Информация по обходам</string>
+
+    <!-- Camera Fragment -->
+    <string name="scan_floor">Записать видео</string>
+    <string name="load_video">Загрузить видео</string>
+    <string name="table">Таблица</string>
+    <string name="or">ИЛИ</string>
+    <string name="write_floor">Введите этаж</string>
+    <string name="counting_of_floors">Количество этажей: %s</string>
+    <string name="counting_of_flats">Количество квартир: %s</string>
+    <string name="about_table">Результаты отобразятся в скор-таблице через некоторое время. Для перехода на неё нажмите на кнопку ниже.</string>
+
+    <!-- Auth Fragment -->
+    <string name="sing_in">Вход</string>
+    <string name="sing_up">Регистрация</string>
+    <string name="login_hint">Логин</string>
+    <string name="password_hint">Пароль</string>
+    <string name="button_sing_in">Войти</string>
+    <string name="button_sing_up">Зарегистрироваться</string>
+    <string name="fio_hint">ФИО</string>
+    <string name="email_hint">Почта</string>
+    <string name="repeat_password_hint">Повторитe пароль</string>
+
+    <string name="register_success">Успешно!</string>
+    <string name="login_success">Добро пожаловать!</string>
+
 </resources>

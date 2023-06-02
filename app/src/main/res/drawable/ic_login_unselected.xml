@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="21dp"
+    android:height="21dp"
+    android:viewportWidth="21"
+    android:viewportHeight="21">
+    <path
+        android:fillColor="@color/samolet_grey"
+        android:pathData="M10.5 2.63c1.44 0 2.63 1.18 2.63 2.62 0 1.44-1.19 2.63-2.63 2.63S7.87 6.69 7.87 5.25s1.19-2.63 2.63-2.63Zm0 13.12c3.54 0 7.61 1.7 7.88 2.63H2.63c0.3-0.95 4.34-2.63 7.87-2.63ZM10.5 0C7.6 0 5.25 2.35 5.25 5.25S7.6 10.5 10.5 10.5s5.25-2.35 5.25-5.25S13.4 0 10.5 0Zm0 13.13C7 13.13 0 14.88 0 18.37V21h21v-2.63c0-3.49-7-5.25-10.5-5.25Z"/>
+</vector>

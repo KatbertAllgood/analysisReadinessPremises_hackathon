@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.camera.CameraFragment">
+
+<!--    <TextView-->
+<!--        android:id="@+id/fragment_camera_tv_num_of_section"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_marginTop="40dp"-->
+
+<!--        android:textColor="@color/black"-->
+<!--        android:fontFamily="@font/roboto_bold"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:textSize="18sp"-->
+<!--        tools:text="1-я Секция" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/fragment_camera_tv_count_of_floors"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_marginTop="12dp"-->
+
+<!--        android:textColor="@color/black"-->
+<!--        android:fontFamily="@font/roboto_regular"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:textSize="16sp"-->
+<!--        android:text="@string/counting_of_floors" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/fragment_camera_tv_count_of_flats"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_marginTop="2dp"-->
+
+<!--        android:textColor="@color/black"-->
+<!--        android:fontFamily="@font/roboto_regular"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:textSize="16sp"-->
+<!--        android:text="@string/counting_of_flats" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/fragment_camera_iv_map_of_section"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="120dp"-->
+
+<!--        android:background="@color/samolet_grey"-->
+
+<!--        android:layout_marginVertical="50dp"-->
+<!--        android:layout_marginHorizontal="50dp" />-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fragment_camera_button_scan_floor"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="10dp"
+
+            android:background="@color/samolet_blue"
+
+            android:text="@string/scan_floor"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"
+
+            android:drawableEnd="@drawable/ic_camera"
+            android:drawablePadding="20dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginVertical="36dp"
+
+        android:text="@string/or"
+        android:fontFamily="@font/roboto_light"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:textColor="@color/black" />
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/fragment_camera_et_floor"-->
+
+<!--        android:backgroundTint="@color/samolet_grey"-->
+
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="40dp"-->
+
+<!--        android:layout_marginTop="36dp"-->
+
+<!--        android:layout_gravity="center"-->
+<!--        android:gravity="center"-->
+
+<!--        android:ellipsize="start"-->
+<!--        android:fontFamily="@font/roboto_regular"-->
+<!--        android:hint="@string/write_floor"-->
+<!--        android:inputType="number"-->
+<!--        android:maxLines="1"-->
+<!--        android:paddingHorizontal="5dp"-->
+<!--        android:textColor="@color/samolet_blue" />-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="50dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fragment_camera_button_upload_video"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="10dp"
+
+            android:background="@color/samolet_blue"
+
+            android:text="@string/load_video"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"
+
+            android:paddingEnd="20dp"
+
+            android:drawableEnd="@drawable/ic_upload_from_galery"
+            android:drawablePadding="20dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/fragment_camera_tv_hint_about_table"
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+
+        android:gravity="center"
+
+        android:layout_marginTop="200dp"
+        android:layout_marginHorizontal="50dp"
+
+        android:text="@string/about_table"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="16sp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fragment_camera_button_open_table"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:padding="10dp"
+
+            android:background="@color/samolet_blue"
+
+            android:text="@string/table"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+
+        android:id="@+id/fragment_camera_card_download_file"
+
+        android:layout_marginTop="100dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="50dp"
+        android:layout_gravity="center"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+
+
+            android:id="@+id/fragment_camera_button_download_file"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@drawable/shape_for_download_button"
+            android:src="@drawable/ic_download" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/rtsp_video_constraint"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+<!--        <org.videolan.libvlc.util.VLCVideoLayout-->
+<!--            android:id="@+id/rtsp_video"-->
+
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"/>-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</LinearLayout>
