@@ -1,0 +1,20 @@
+stages:
+  - build
+  - deploy
+
+before_script:
+  # Установка зависимостей и настройка среды для сборки Android
+
+build:
+  stage: build
+  script:
+    - ./gradlew assembleDebug
+  artifacts:
+    paths:
+      - app/build/outputs/apk/debug/app-debug.apk
+
+deploy:
+  stage: deploy
+  script:
+    - apt-get update && apt-get install -y openssh-client
+    - 'sshpass -p "$SSH_PASSWORD" scp -o StrictHostKeyChecking=no app/build/outputs/apk/debug/app-debug.apk $SSH_USER@$SSH_SERVER:/path/to/destination'
