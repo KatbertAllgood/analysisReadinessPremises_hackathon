@@ -10,6 +10,6 @@ object Constants {
 
     const val TABLE_URL = "https://docs.google.com/spreadsheets/d/1Lj4Bsg5fBgIIkiZudHYWoLzsFDB9F-DWSZ_ShgrZ2S4/edit?usp=sharing"
 
-    const val RTSP_STREAM = "rtsp://Alex5405:Alexmeath5405@xamex.ru:5405/stream1"
+    const val RTSP_STREAM = ""
 
 }
