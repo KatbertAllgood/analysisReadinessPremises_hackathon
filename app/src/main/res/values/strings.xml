@@ -1,32 +1,8 @@
 <resources>
-    <string name="app_name">samoletHackaton</string>
+    <string name="app_name">samolet</string>
 
-
-    <!-- Profile Fragment -->
-    <string name="my_objects">Мои объекты</string>
-    <string name="my_statistic">Моя статистика</string>
-    <string name="counting_objects_date">Количество объектов за %s.%s.%s</string>
-    <string name="amount">%s шт.</string>
-    <string name="bypass_plan">%s\nПлан\nобхода</string>
-    <string name="my_income">%s₽\nМой доход</string>
-
-    <!-- Item my object -->
-    <string name="amount_of_objects">Количество объектов:</string>
-    <string name="number_of_flats">%s квартир</string>
-    <string name="address_of_object">Адрес объекта:</string>
-    <string name="passed_objects">Пройдено объектов: %s из %s</string>
-
-    <!-- District Fragment -->
-    <string name="flats_dist">квартир</string>
-    <string name="sections">секций</string>
-    <string name="sections_alt">Секции</string>
-    <string name="sections_readiness">Готовность секций по этажам</string>
-
-    <!-- Item section -->
-    <string name="section_for_item">с\nе\nк\nц\nи\nя</string>
-
-    <!-- Section Fragment -->
-    <string name="info_about_bypasses">Информация по обходам</string>
+    <!-- Bottom Navigation -->
+    <string name="profile">Профиль</string>
 
     <!-- Camera Fragment -->
     <string name="scan_floor">Записать видео</string>
@@ -51,5 +27,25 @@
 
     <string name="register_success">Успешно!</string>
     <string name="login_success">Добро пожаловать!</string>
+
+    <!-- Main Page Fragment -->
+    <string name="my_tasks">Мои задачи</string>
+    <string name="count_of_objects_with_date">Количество объектов за %s</string>
+    <string name="counting_with">%s шт</string>
+
+    <!-- Item Date -->
+    <string name="today">Сегодня</string>
+    <string name="tomorrow">Завтра</string>
+
+    <!-- Item Object -->
+    <string name="address">Адрес:</string>
+    <string name="passed_sections">Пройдено секций:</string>
+    <string name="counting_sections">%s из %s</string>
+
+    <!-- Building Fragmnet -->
+    <string name="tasks_of_building">Задачи дома</string>
+    <string name="progress_sections">Прогресс по выполнению секций</string>
+    <string name="address_without_dots">Адрес</string>
+    <string name="sections">Секции</string>
 
 </resources>

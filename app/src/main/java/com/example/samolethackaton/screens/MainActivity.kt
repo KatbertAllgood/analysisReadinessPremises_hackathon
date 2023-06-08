@@ -10,10 +10,13 @@ import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.data.models.SendVideoParamsRequestData
 import com.example.data.models.SendVideoParamsResponseData
 import com.example.data.network.api.ServerApi
 import com.example.domain.utils.Constants
+import com.example.samolethackaton.R
 import com.example.samolethackaton.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -48,6 +51,23 @@ class MainActivity : AppCompatActivity(), SendVideoParamsRequestData.UploadCallb
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val navController = this.findNavController(R.id.nav_host_fragment)
+        binding.bottomNavigationBar.setupWithNavController(navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.authFragment -> {
+                   binding.bottomNavigationBar.visibility = View.GONE
+                }
+                else -> {
+                    binding.root.setBackgroundResource(R.color.fragment_background)
+                    binding.bottomNavigationBar.visibility = View.VISIBLE
+//                    binding.bottomNavigationBar.menu.getItem(0).isChecked = true
+                }
+            }
+        }
+
     }
 
 

@@ -21,11 +21,38 @@
         app:navGraph="@navigation/nav_graph"
 
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:itemIconSize="40dp"
+
+        app:itemActiveIndicatorStyle="@style/App.Custom.Indicator"
+
+        android:background="@drawable/shape_bottom_navigation"
+
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="8dp"
+
+        app:labelVisibilityMode="selected"
+
+        app:itemIconTint="@drawable/bottom_navigation_selector"
+        app:itemTextColor="@color/samolet_primary"
+
+        app:menu="@menu/nav_menu"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <ProgressBar
+        android:visibility="gone"
+
         android:id="@+id/progress_bar"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
@@ -40,20 +67,3 @@
         tools:progress="40" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-<!--<com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--android:id="@+id/bottom_navigation_bar"-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="56dp"-->
-
-<!--android:background="@drawable/shape_bottom_navigation_bar"-->
-
-<!--app:itemIconTint="@drawable/bottom_navigation_selector"-->
-<!--app:itemTextColor="@color/nav_bar_pressed"-->
-
-<!--app:menu="@menu/bottom_navigation_menu"-->
-
-<!--app:layout_constraintBottom_toBottomOf="parent"-->
-<!--app:layout_constraintStart_toStartOf="parent"-->
-<!--app:layout_constraintEnd_toEndOf="parent"/>-->

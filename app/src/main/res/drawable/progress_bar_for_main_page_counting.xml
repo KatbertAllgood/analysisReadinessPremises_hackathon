@@ -8,7 +8,7 @@
             <solid android:color="@color/profile_progress_bar_background" />
 
             <corners
-                android:radius="0dp"/>
+                android:radius="10dp"/>
 
         </shape>
 
@@ -21,9 +21,9 @@
             <shape android:shape="rectangle">
 
                 <corners
-                    android:radius="0dp"/>
+                    android:radius="10dp"/>
 
-                <solid android:color="@color/samolet_blue" />
+                <solid android:color="@color/samolet_primary" />
 
             </shape>
 

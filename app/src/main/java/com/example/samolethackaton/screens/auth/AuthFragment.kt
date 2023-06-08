@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
+import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.example.domain.models.LoginParamsDomain
 import com.example.domain.models.RegistrationParamsDomain
@@ -213,6 +214,7 @@ class AuthFragment : Fragment(R.layout.fragment_auth) {
                     ),
                     requireContext()
                 )
+                findNavController().navigate(R.id.action_authFragment_to_mainPageFragment)
             }
         }
 
@@ -223,8 +225,20 @@ class AuthFragment : Fragment(R.layout.fragment_auth) {
 
         viewModel.getOnSuccessLogin().observe(viewLifecycleOwner) {
 
-            findNavController().navigate(R.id.action_authFragment_to_profileFragment)
+            if (it == true) {
+
+//                findNavController().navigate(R.id.action_authFragment_to_mainPageFragment)
+
+//                if (findNavController().currentDestination?.id == R.id.mainPageFragment) {
+//                    findNavController().navigate(R.id.action_authFragment_to_mainPageFragment)
+//                }
+            }
         }
     }
+
+//    fun navigate(destination: NavDirections) = with(findNavController()) {
+//        currentDestination?.getAction(destination.actionId)
+//            ?.let { navigate(destination) }
+//    }
 
 }

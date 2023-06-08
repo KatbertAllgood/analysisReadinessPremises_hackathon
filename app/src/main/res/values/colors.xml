@@ -3,12 +3,16 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="profile_progress_bar_background">#DDDDDD</color>
+    <color name="profile_progress_bar_background">#D9D9D9</color>
 
     <color name="samolet_blue">#267DF7</color>
     <color name="samolet_grey">#828282</color>
     <color name="samolet_blue_light">#03A9F4</color>
 
     <color name="background_filter">#99000000</color>
+
+    <color name="samolet_primary">#007BFB</color>
+
+    <color name="fragment_background">#F3F4F6</color>
 
 </resources>

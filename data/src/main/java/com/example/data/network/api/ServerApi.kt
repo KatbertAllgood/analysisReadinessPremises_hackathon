@@ -2,6 +2,7 @@ package com.example.data.network.api
 
 import com.example.data.models.LoginParamsData
 import com.example.data.models.LoginResponseData
+import com.example.data.models.ObjectsToDateResponseData
 import com.example.data.models.RegistrationParamsData
 import com.example.data.models.SendVideoParamsRequestData
 import com.example.data.models.SendVideoParamsResponseData
@@ -63,5 +64,8 @@ interface ServerApi {
     fun getUserById(
         @Path("id") id : String,
     ) : Single<UserParamsData>
+
+    @GET("objects")
+    fun getAllObjects() : Single<List<ObjectsToDateResponseData>>
 
 }

@@ -241,7 +241,7 @@
         app:cardElevation="5dp"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
-        app:cardCornerRadius="20dp">
+        app:cardCornerRadius="10dp">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/fragment_auth_button_sing_in"
@@ -263,7 +263,7 @@
         app:cardElevation="5dp"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
-        app:cardCornerRadius="20dp">
+        app:cardCornerRadius="10dp">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/fragment_auth_button_sing_up"
