@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@id/mainPageFragment"
+        android:id="@id/mainNestedGraph"
         android:icon="@drawable/ic_tasks_for_bottom_navigation"
         android:title="@string/my_tasks" />
     <item
-        android:id="@id/profileFragment"
+        android:id="@id/profileNestedGraph"
         android:icon="@drawable/ic_profile_for_bottom_navigation"
         android:title="@string/profile" />
 </menu>

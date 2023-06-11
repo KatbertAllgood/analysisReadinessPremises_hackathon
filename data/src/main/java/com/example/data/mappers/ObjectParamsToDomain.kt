@@ -9,8 +9,13 @@ class ObjectParamsToDomain(
     fun toDomain() = ObjectParamsDomain(
         objectParamsData.id_object,
         objectParamsData.name,
-        objectParamsData.address,
         objectParamsData.count_section,
         objectParamsData.count_flats,
+        objectParamsData.userId,
+        objectParamsData.date,
+        objectParamsData.street,
+        objectParamsData.building,
+        objectParamsData.general_readiness,
+        objectParamsData.ready_section,
     )
 }

@@ -23,12 +23,14 @@ class AuthFragmentVM : ViewModel() {
 
     private val TAG = AuthFragmentVM::class.simpleName
 
+    private val fragment = AuthFragment()
+
     private val networkRepository = App.getNetworkRepository()
     private val registerUseCase = RegisterUseCase(networkRepository)
     private val loginUseCase = LoginUseCase(networkRepository)
 
-    private val onSuccessLoginLiveData = MutableLiveData<Boolean>()
-    fun getOnSuccessLogin() : LiveData<Boolean> = onSuccessLoginLiveData
+    private val onSuccessLoginLiveData = MutableLiveData<Boolean?>()
+    fun getOnSuccessLogin() : LiveData<Boolean?> = onSuccessLoginLiveData
 
     fun registerUser(
         registerParams: RegistrationParamsDomain,
@@ -64,15 +66,18 @@ class AuthFragmentVM : ViewModel() {
             .subscribe(object : DisposableSingleObserver<LoginResponseDomain>() {
                 override fun onSuccess(t: LoginResponseDomain) {
                     Log.d(TAG, "LOGIN_SUCCESS: ${t.token}")
-                    Toast.makeText(
-                        context,
-                        context.resources.getText(R.string.login_success),
-                        Toast.LENGTH_SHORT
-                    ).show()
+//                    Toast.makeText(
+//                        context,
+//                        context.resources.getText(R.string.login_success),
+//                        Toast.LENGTH_SHORT
+//                    ).show()
                     onSuccessLoginLiveData.value = true
+
+//                    fragment.navigateToMainPage()
                 }
                 override fun onError(e: Throwable) {
                     Log.d(TAG, "LOGIN_ERROR: ${e.message}")
+                    onSuccessLoginLiveData.value = false
                 }
             })
 

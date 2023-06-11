@@ -26,12 +26,13 @@
     <string name="repeat_password_hint">Повторитe пароль</string>
 
     <string name="register_success">Успешно!</string>
-    <string name="login_success">Добро пожаловать!</string>
+    <string name="login_error">Неверный логин или пароль</string>
 
     <!-- Main Page Fragment -->
     <string name="my_tasks">Мои задачи</string>
     <string name="count_of_objects_with_date">Количество объектов за %s</string>
     <string name="counting_with">%s шт</string>
+    <string name="choose_date">Пожалуйста, выберите дату</string>
 
     <!-- Item Date -->
     <string name="today">Сегодня</string>
@@ -41,11 +42,23 @@
     <string name="address">Адрес:</string>
     <string name="passed_sections">Пройдено секций:</string>
     <string name="counting_sections">%s из %s</string>
+    <string name="address_constructor">ул. %s, дом %s</string>
+    <string name="building_num">дом %s</string>
 
-    <!-- Building Fragmnet -->
+    <!-- Building Fragment -->
     <string name="tasks_of_building">Задачи дома</string>
     <string name="progress_sections">Прогресс по выполнению секций</string>
     <string name="address_without_dots">Адрес</string>
     <string name="sections">Секции</string>
+
+    <!-- Item Floor -->
+    <string name="floor_num">Этаж %s</string>
+    <string name="list_flats">Список квартир</string>
+
+    <!-- Flat Fragment -->
+    <string name="finishing_flat_num">Отделка квартиры %s</string>
+    <string name="clean_r">Чистовая отделка</string>
+    <string name="rough_r">Черновая отделка</string>
+    <string name="other">Остальное</string>
 
 </resources>

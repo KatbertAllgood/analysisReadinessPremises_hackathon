@@ -15,6 +15,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.data.models.SendVideoParamsRequestData
 import com.example.data.models.SendVideoParamsResponseData
 import com.example.data.network.api.ServerApi
+import com.example.data.utils.ApplicationPreferences
 import com.example.domain.utils.Constants
 import com.example.samolethackaton.R
 import com.example.samolethackaton.databinding.ActivityMainBinding
@@ -54,6 +55,8 @@ class MainActivity : AppCompatActivity(), SendVideoParamsRequestData.UploadCallb
 
         val navController = this.findNavController(R.id.nav_host_fragment)
         binding.bottomNavigationBar.setupWithNavController(navController)
+
+        ApplicationPreferences.setup(applicationContext)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
@@ -121,7 +124,12 @@ class MainActivity : AppCompatActivity(), SendVideoParamsRequestData.UploadCallb
             ) {
                 Log.d(TAG, response.toString())
                 response.body()?.let {
-                    Log.d(TAG, it.toString())
+
+                    Log.d(TAG, it.urlVideo)
+
+                    ApplicationPreferences.videoPath = it.urlVideo
+                    Log.d(TAG, ApplicationPreferences.videoPath!!)
+
                     binding.root.snackbar("Видео успешно загружено!")
                     binding.progressBar.progress = 100
 

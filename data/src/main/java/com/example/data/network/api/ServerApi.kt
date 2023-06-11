@@ -2,8 +2,13 @@ package com.example.data.network.api
 
 import com.example.data.models.LoginParamsData
 import com.example.data.models.LoginResponseData
+import com.example.data.models.ObjectParamsData
 import com.example.data.models.ObjectsToDateResponseData
 import com.example.data.models.RegistrationParamsData
+import com.example.data.models.ScorRequestData
+import com.example.data.models.ScorResponseData
+//import com.example.data.models.ScoreMainResponseData
+import com.example.data.models.SectionParamsData
 import com.example.data.models.SendVideoParamsRequestData
 import com.example.data.models.SendVideoParamsResponseData
 import com.example.data.models.ServerResponseMessageData
@@ -67,5 +72,18 @@ interface ServerApi {
 
     @GET("objects")
     fun getAllObjects() : Single<List<ObjectsToDateResponseData>>
+
+    @GET("objects/{id}")
+    fun getObjectById(
+        @Path("id") id: String
+    ) : Single<ObjectParamsData>
+
+    @GET("sections")
+    fun getAllSections() : Single<List<SectionParamsData>>
+
+    @POST("classify")
+    fun getScores(
+        @Body path : ScorRequestData
+    ) : Single<ScorResponseData>
 
 }

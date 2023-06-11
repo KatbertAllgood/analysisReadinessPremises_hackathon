@@ -1,6 +1,5 @@
 package com.example.samolethackaton.screens.auth
 
-import android.content.res.ColorStateList
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -12,12 +11,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
-import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.example.domain.models.LoginParamsDomain
 import com.example.domain.models.RegistrationParamsDomain
 import com.example.samolethackaton.R
 import com.example.samolethackaton.databinding.FragmentAuthBinding
+import com.example.samolethackaton.screens.mainpage.MainPageFragment
 
 class AuthFragment : Fragment(R.layout.fragment_auth) {
     private lateinit var binding : FragmentAuthBinding
@@ -214,7 +213,6 @@ class AuthFragment : Fragment(R.layout.fragment_auth) {
                     ),
                     requireContext()
                 )
-                findNavController().navigate(R.id.action_authFragment_to_mainPageFragment)
             }
         }
 
@@ -225,20 +223,23 @@ class AuthFragment : Fragment(R.layout.fragment_auth) {
 
         viewModel.getOnSuccessLogin().observe(viewLifecycleOwner) {
 
-            if (it == true) {
+            when (it) {
+                null -> {
 
-//                findNavController().navigate(R.id.action_authFragment_to_mainPageFragment)
+                }
+                true -> findNavController().navigate(R.id.mainPageFragment)
+                false -> {
+                    Toast.makeText(
+                        context,
+                        resources.getText(R.string.login_error),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+                else -> {
 
-//                if (findNavController().currentDestination?.id == R.id.mainPageFragment) {
-//                    findNavController().navigate(R.id.action_authFragment_to_mainPageFragment)
-//                }
+                }
             }
         }
     }
-
-//    fun navigate(destination: NavDirections) = with(findNavController()) {
-//        currentDestination?.getAction(destination.actionId)
-//            ?.let { navigate(destination) }
-//    }
 
 }

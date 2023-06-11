@@ -18,6 +18,7 @@ class ObjectsToDateResponseToData(
 
     fun toData() = ObjectsToDateResponseData(
         objectsToDateResponseDomain.date,
+        objectsToDateResponseDomain.progress,
         objects
     )
 }

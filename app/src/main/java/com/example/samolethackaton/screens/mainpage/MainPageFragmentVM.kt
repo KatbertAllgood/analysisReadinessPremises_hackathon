@@ -24,6 +24,9 @@ class MainPageFragmentVM : ViewModel() {
     private val tasksOnSelectedDate = MutableLiveData<List<ObjectParamsDomain>>()
     fun getTasksOnSelectedDateLiveData() : LiveData<List<ObjectParamsDomain>> = tasksOnSelectedDate
 
+    private val progressOnSelectedDate = MutableLiveData<Int>()
+    fun getProgressOnSelectedData() : LiveData<Int> = progressOnSelectedDate
+
     private val allDates = MutableLiveData<List<Pair<String, String>>>()
     fun getAllDateLiveData() : LiveData<List<Pair<String, String>>> = allDates
 
@@ -37,18 +40,30 @@ class MainPageFragmentVM : ViewModel() {
 
                     allObjects = t
 
-//                    val dateSet : MutableSet<String> = mutableSetOf()
-                    val dates : MutableList<Pair<String, String>> = mutableListOf()
-//                    val datesResult : MutableList<Pair<String, String>> = mutableListOf()
-
+                    val daysForFilter : MutableSet<Int> = mutableSetOf()
                     for (i in t) {
-//                        dateSet.add(i.date)
+                        val day : Int = i.date.split(".")[0].toInt()
+                        daysForFilter.add(day)
+                    }
+
+                    val sorterResponse : MutableList<ObjectsToDateResponseDomain> = mutableListOf()
+
+                    for (i in daysForFilter.sorted()) {
+                        for (j in t) {
+                            if (i == j.date.split(".")[0].toInt()) {
+
+                                sorterResponse.add(j)
+                            }
+                        }
+                    }
+
+                    val dates : MutableList<Pair<String, String>> = mutableListOf()
+
+                    for (i in sorterResponse) {
                         dates.add(Pair(i.date, i.objects.size.toString()))
                     }
 
                     allDates.value = dates
-
-//                    changeDate(t[0].date)
 
                 }
 
@@ -66,9 +81,9 @@ class MainPageFragmentVM : ViewModel() {
             if (date == i.date) {
 
                 tasksOnSelectedDate.value = i.objects
+                progressOnSelectedDate.value = i.progress
 
             }
         }
     }
-
 }

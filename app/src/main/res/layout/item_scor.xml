@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_scor_title"
+
+            android:layout_weight="1"
+
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+
+            android:textAlignment="center"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:layout_gravity="center"
+
+            android:textSize="11sp"
+            android:textColor="@color/samolet_grey"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            tools:text="Ванна" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/item_scor_value"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+
+                android:textColor="@color/samolet_primary"
+
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="83" />
+
+            <TextView
+                android:visibility="gone"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+
+                android:maxLines="1"
+                android:text="%"
+
+                android:textColor="@color/samolet_primary"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/item_scor_value"
+                app:layout_constraintStart_toEndOf="@id/item_scor_value" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

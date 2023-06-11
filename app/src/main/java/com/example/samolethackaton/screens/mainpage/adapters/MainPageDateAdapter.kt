@@ -18,8 +18,6 @@ class MainPageDateAdapter(
 
     private val TAG = MainPageDateAdapter::class.simpleName
 
-//    private var firstEntry = true
-
     var onItemClick : ((Pair<String, String>) -> Unit)? = null
     private var selectedItemPosition = -1
 
@@ -30,15 +28,16 @@ class MainPageDateAdapter(
         val dateTextView = binding.itemDateTvDate
         val notificationTextView = binding.itemDateTvNotification
 
-        fun bind (date: Pair<String, String>, position: Int) = with(binding) {
+        fun bind (date: Pair<String, String>, position: Int, isSelected: Boolean) = with(binding) {
 
-            Log.d(TAG, "DATE_POSITION: $position")
 
             itemDateTvNotification.text = date.second
 
-            val dateSplitted = date.first.split('.')
+            val splittedDate = date.first.split('.')
 
-            itemDateTvDate.text = "${dateSplitted[0]}.${dateSplitted[1]}"
+            itemDateTvDate.text = "${splittedDate[0]}.${splittedDate[1]}"
+
+
         }
     }
 
@@ -58,7 +57,7 @@ class MainPageDateAdapter(
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: DateHolder, position: Int) {
-        holder.bind(datesList[position], holder.adapterPosition)
+        holder.bind(datesList[position], holder.adapterPosition, true)
 
         val dateOnClick = datesList[position]
         holder.itemView.setOnClickListener {
@@ -66,16 +65,6 @@ class MainPageDateAdapter(
             selectedItemPosition = holder.adapterPosition
             notifyDataSetChanged()
         }
-
-//        if(position == 0 && firstEntry == true) {
-//            holder.apply {
-//                root.setBackgroundResource(R.color.samolet_primary)
-//                dateTextView.setTextColor(ContextCompat.getColor(context, R.color.white))
-//                notificationTextView.setTextColor(ContextCompat.getColor(context, R.color.black))
-//                notificationTextView.setBackgroundResource(R.drawable.shape_oval_white)
-//            }
-//            firstEntry = false
-//        }
 
         if (selectedItemPosition == position) {
             holder.apply {

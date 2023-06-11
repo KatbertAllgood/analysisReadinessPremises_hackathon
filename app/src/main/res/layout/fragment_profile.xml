@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screens.profile.ProfileFragment">
 
+    <TextView
 
-</FrameLayout>
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:gravity="center"
+
+        android:text="В разработке"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/samolet_grey"
+        android:textSize="18sp"
+        android:layout_gravity="center"/>
+
+    <CalendarView
+        android:visibility="gone"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

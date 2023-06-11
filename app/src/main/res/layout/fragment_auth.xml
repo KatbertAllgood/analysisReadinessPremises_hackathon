@@ -8,12 +8,26 @@
     android:layout_height="match_parent"
     tools:context=".screens.auth.AuthFragment">
 
+    <ImageView
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logo" />
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logo_word" />
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="120dp">
+        android:layout_marginTop="40dp">
 
         <ImageView
             android:layout_width="wrap_content"
